@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('src/porsche.jpg') center center fixed;
+    background-size: cover;
+    filter: brightness(100%);
+    animation: desktopZoom 5s ease-in-out infinite;
+}
+
+@keyframes desktopZoom {
+    0% {
+        background-size: 100%;
+    }
+    50%{
+        background-size: 102%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body{
+        animation: mobileZoom 10s ease-in-out infinite;
+    }
+
+    @keyframes mobileZoom{
+        0%{
+            background-size: 200%;
+        }
+        50%{
+            background-size: 180%;
+        }
+        100%{
+            background-size: 200%;
+        }
+    }
+}
+
+.weather-search-container{
+    backdrop-filter: blur(-5px);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    height: auto;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    outline: 1px solid #fff;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: backgrounf-color 0.3s; 
+}
+
+button:hover{
+    background-color: #0b73e9;
+}
+
+.message {
+    padding-top: 10%;
+}
+
+.error {
+    color: red;
+}
+
+@media (max-width: 600px){
+    .weather-search-container {
+        width: 90%;
+        padding: 15px;
+    }
+    button {
+        padding: 8px 15px;
+    }
+}
+
+.weather-result{
+    color: white;
+    font-size: 20px;
+}
+
+.heading-main{
+    color: rbg(255, 255, 255);
+}
+
+.jaison,a {
+    color: white;
+    text-align: center;
+    padding-bottom: 2px;
+    text-decoration: none;
+}

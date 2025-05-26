@@ -1,0 +1,116 @@
+body {
+  filter: brightness();
+  background: url("porsche.b37f5a9a.jpg") center / cover fixed;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  animation: 5s ease-in-out infinite desktopZoom;
+  display: flex;
+}
+
+@keyframes desktopZoom {
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 102%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
+@media (width <= 600px) {
+  body {
+    animation: 10s ease-in-out infinite mobileZoom;
+  }
+
+  @keyframes mobileZoom {
+    0% {
+      background-size: 200%;
+    }
+
+    50% {
+      background-size: 180%;
+    }
+
+    100% {
+      background-size: 200%;
+    }
+  }
+}
+
+.weather-search-container {
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border-radius: 10px;
+  outline: 1px solid #fff;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  padding: 15px;
+  box-shadow: 0 4px 20px #0000004d;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4facfe;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  transition: backgrounf-color .3s;
+}
+
+button:hover {
+  background-color: #0b73e9;
+}
+
+.message {
+  padding-top: 10%;
+}
+
+.error {
+  color: red;
+}
+
+@media (width <= 600px) {
+  .weather-search-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
+}
+
+.weather-result {
+  color: #fff;
+  font-size: 20px;
+}
+
+.heading-main {
+  color: rbg(255, 255, 255);
+}
+
+.jaison, a {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=whetherApp.9e4c6fd2.css.map */
